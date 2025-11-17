@@ -18,11 +18,11 @@ public class Chips extends MenuItem {
 
     @Override
     public double getPrice() {
-        return 1.5;
+        return 2.0;
     }
 
     public String toString() {
-        return bagOfChips.substring(0, 1).toUpperCase() + bagOfChips.substring(1) + " - $1.50";
+        return bagOfChips.substring(0, 1).toUpperCase() + bagOfChips.substring(1) + " - $2.00";
     }
 }
 
