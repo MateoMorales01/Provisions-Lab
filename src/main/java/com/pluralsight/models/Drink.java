@@ -1,4 +1,4 @@
-package pluralsight.models;
+package com.pluralsight.models;
 
 public class Drink  extends MenuItem{
 

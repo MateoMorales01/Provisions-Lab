@@ -1,4 +1,4 @@
-package pluralsight.ui;
+package com.pluralsight.ui;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class UserInterface {
     private Scanner scanner = new Scanner(System.in);
 
-    public int HomeScreen() {
+    public int homeScreen() {
         System.out.println("=================================================");
         System.out.println("            Welcome to Deli-Shop                 ");
         System.out.println("=================================================");
@@ -28,7 +28,7 @@ public class UserInterface {
         }
     }
 
-    private int OrderMenu() {
+    private int orderMenu() {
             System.out.println("\n---Order Menu---");
             System.out.println("1) Add Sandwich");
             System.out.println("2) Add Drink");
@@ -58,7 +58,7 @@ public class UserInterface {
         }
 
 
-        public String BreadType() {
+        public String breadType() {
             System.out.println("\nPlease choose bread type:");
             System.out.println("white, wheat, rye, wrap");
             System.out.println("Enter bread type: ");
@@ -70,7 +70,7 @@ public class UserInterface {
             System.out.println("4, 8, 12");
             return scanner.nextLine();
         }
-        public boolean Toasted() {
+        public boolean toasted() {
             System.out.println("Toasted? (yes or no):");
 
             String choice = scanner.nextLine().toLowerCase();
@@ -79,9 +79,11 @@ public class UserInterface {
                 case "yes":
                     return true;
                 case "no":
+                default:
                     return false;
             }
         }
+
 
         public List<String> meatList() {
         List<String> meats = new ArrayList<>();
@@ -191,6 +193,20 @@ public class UserInterface {
                 }
             }
         }
+
+    public boolean extraSauce() {
+        System.out.println("Did you want Extra cheese? (yes/no): ");
+
+        String choice = scanner.nextLine().toLowerCase();
+
+        switch (choice) {
+            case "yes":
+                return true;
+            case "no":
+            default:
+                return false;
+        }
+    }
 
         //Drink
     public String drinkSize() {

@@ -1,15 +1,13 @@
-package pluralsight.data;
+package com.pluralsight.data;
 
-import pluralsight.models.Order;
+import com.pluralsight.models.Order;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
 public class RecieptManager {
@@ -20,7 +18,7 @@ public class RecieptManager {
         try {
             Files.createDirectories(Path.of("receipts"));
         } catch (IOException e) {
-            System.out.println("Could not create receipts folder!");
+            System.out.println("Unable to create a receipt file");
             return;
         }
 
@@ -52,7 +50,7 @@ public class RecieptManager {
             System.out.println("Receipt saved: " + fileName);
 
         } catch (IOException e) {
-            System.out.println("Error writing receipt file!");
+            System.out.println("Unable to make the receipt");
             e.printStackTrace();
         }
     }
