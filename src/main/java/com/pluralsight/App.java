@@ -72,7 +72,7 @@ public class App {
                     break;
 
                 default:
-                    System.out.println("Invalid choice. Try again.");
+                    System.out.println("Invalid choice. Please try again.");
             }
         }
     }

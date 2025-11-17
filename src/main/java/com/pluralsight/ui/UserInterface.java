@@ -208,7 +208,7 @@ public class UserInterface {
     public boolean addExtraSauce() {
         System.out.println("=================================================");
         System.out.println("Do you want Extra sauce? (yes/no): ");
-        System.out.println("\n=================================================");
+        System.out.println("=================================================");
 
         String choice = scanner.nextLine().toLowerCase();
 
